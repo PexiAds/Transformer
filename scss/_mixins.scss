@@ -1,0 +1,31 @@
+/* Border radius */
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+/* Translate */
+
+@mixin transform-translate($value, $value2) {
+  -moz-transform: translate($value, $value2);
+  -webkit-transform: translate($value, $value2);
+  -o-transform: translate($value, $value2);
+  -ms-transform: translate($value, $value2);
+  transform: translate($value, $value2);
+}
+
+/* Transition */
+
+@mixin transition($item, $seconden, $type) {
+  -webkit-transition: $item $seconden $type;
+  -moz-transition: $item $seconden $type;
+  -ms-transition: $item $seconden $type;
+  -o-transition: $item $seconden $type;
+  transition: $item $seconden $type;
+}
+
+/* FLEXBOX */
+

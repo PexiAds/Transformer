@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Pexi Transformer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+
+  <link rel="stylesheet" type="text/css" href="slick.css" />
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <script src="https://static.pexi.nl/pexi.js"></script>
+  <script src="https://static.pexi.nl/general/jquery.min.js"></script>
+  <script type="text/javascript" src="slick.min.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+</head>
+
+<body id="content">
+  <div class="transformer">
+
+
+    <div class="slider">
+
+        <!-- Slide 1 - start -->
+            <div class="slide slide_1" onclick="pexi.click(0);">
+                <div class="background"></div>
+
+                <div class="container">
+                  <img src="https://static.pexi.nl/logo.svg" class="logo">
+
+                  <div class="text">
+                    <h1>Titel</h1>
+                    <span>Tekst</span>
+                    <div class="cta">Call to action</div>
+                  </div>
+
+                </div>
+
+            </div>
+        <!-- Slide 1 - end -->
+        <!-- Slide 2 - start -->
+            <div class="slide slide_2" onclick="pexi.click(1);">
+                <div class="background"></div>
+
+                <div class="container">
+                  <img src="https://static.pexi.nl/logo.svg" class="logo">
+
+                  <div class="text">
+                    <h1>Titel</h1>
+                    <span>Tekst</span>
+                    <div class="cta">Call to action</div>
+                  </div>
+
+                </div>
+
+            </div>
+        <!-- Slide 2 - end -->
+        <!-- Slide 3 - start -->
+            <div class="slide slide_3" onclick="pexi.click(2);">
+                <div class="background"></div>
+
+                <div class="container">
+                  <img src="https://static.pexi.nl/logo.svg" class="logo">
+
+                  <div class="text">
+                    <h1>Titel</h1>
+                    <span>Tekst</span>
+                    <div class="cta">Call to action</div>
+                  </div>
+
+                </div>
+
+            </div>
+        <!-- Slide 3 - end -->
+        <!-- Slide 4 - start -->
+            <div class="slide slide_4">
+                <div class="clicklayer" onclick="pexi.click(3);"></div>
+                <div class="background"></div>
+
+                <div class="container">
+                  <img src="https://static.pexi.nl/logo.svg" class="logo">
+
+                  <div class="text">
+                    <h1>Bekijk de video</h1>
+                    <span>Video's in popups live in de banner</span>
+                    <img src="play.svg" class="playbutton" onclick="playVideo('video.mp4');">
+                  </div>
+
+                </div>
+
+            </div>
+        <!-- Slide 4 - end -->
+    </div>
+
+    <!-- De thumbs (navigatie) -->
+    <div class="nav">
+      <div class="nav_inner">
+        <div class="nav_item active" id="nav_item1">
+            <figure><img src="thumb1.jpg" alt="thumb1"><div class="border"></div></figure>
+            <span>Thumb 1</span>
+        </div>
+        <div class="nav_item" id="nav_item2">
+            <figure><img src="thumb2.jpg" alt="thumb2"><div class="border"></div></figure>
+            <span>Thumb 2</span>
+        </div>
+        <div class="nav_item" id="nav_item3">
+            <figure><img src="thumb3.jpg" alt="thumb3"><div class="border"></div></figure>
+            <span>Thumb 3</span>
+        </div>
+        <div class="nav_item" id="nav_item4">
+            <figure><img src="thumb4.jpg" alt="thumb4"><div class="border"></div></figure>
+            <span>Thumb 4</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- video elements -->
+    <div class="video_overlay">
+        <div class="container">
+            <div id="video"></div>
+            <img src="https://static.pexi.nl/closebtn.svg" class="close" onclick="closeVideo();">
+        </div>
+    </div>
+    <!-- end video elements -->
+
+
+  </div>
+</body>
+
+</html>

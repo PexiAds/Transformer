@@ -1,0 +1,180 @@
+@import 'scss/reset';
+@import 'scss/mixins';
+
+//kleuren & settings
+
+$hoogte: 400px;
+$roze: #e32894;
+
+@import 'scss/fonts';
+
+// de basis opmaak van de slide
+
+@import 'scss/base';
+@import 'scss/nav';
+
+// Template voor video overlays
+@import 'scss/video';
+
+// custom dingen voor de slide hieronder
+
+.transformer {
+	display: none;
+	font-weight: bold;
+	position: relative;
+	background-color: white;
+	background-size: auto 100%;
+	font-family: Arial, sans-serif;
+
+	.slider {
+		.slide {
+			overflow: hidden;
+			width: 100%;
+			height: $hoogte;
+			position: relative;
+			cursor: pointer;
+
+			.background {
+				width: 100%;
+				height: $hoogte;
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center center;
+				right: 0px;
+				float: left;
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				background-color: #3454D1;
+			}
+
+			.container {
+				width: 100%;
+				max-width: 320px;
+				padding: 0px 20px;
+				height: $hoogte;
+				margin: 0px auto;
+				position: relative;
+
+				.bg_layer {
+					width: calc(100% + 40px);
+					height: $hoogte;
+					position: absolute;
+					top: 0px;
+					left: -20px;
+					background: rgba($roze, 0.77);
+				}
+
+				.logo {
+					width: 71px;
+					position: absolute;
+					top: 26px;
+					left: 50%;
+					margin-left: -35px;
+				}
+
+				.text {
+					width: 100%;
+					position: absolute;
+					text-align: center;
+					position: absolute;
+					top: 120px;
+					left: 0px;
+
+					h1 {
+						font-size: 32px;
+						line-height: 36px;
+						font-weight: bold;
+						color: white;
+					}
+
+					span {
+						color: white;
+						font-size: 17px;
+						font-weight: normal;
+						margin: 5px;
+						display: block;
+					}
+
+					.cta {
+						font-size: 17px;
+						font-weight: bold;
+						color: white;
+						border: 2px solid white;
+						width: 200px;
+						line-height: 40px;
+						height: 40px;
+						margin: 5px auto;
+						margin-top: 20px;
+						text-transform: uppercase;
+						@include border-radius(20px);
+					}
+
+					.playbutton {
+						width: 60px;
+						margin: 0px auto;
+						margin-top: 20px;
+						opacity: 0.7;
+						position: relative;
+						z-index: 2;
+
+						&:hover {
+							opacity: 1;
+						}
+					}
+				}
+			}
+
+			.clicklayer {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				width: 100%;
+				height: 100%;
+				background: none;
+				z-index: 1;
+			}
+		}
+
+	}
+}
+
+@media (min-width: 552px) {
+	.transformer {
+		.slider {
+			.slide {
+				.container {
+					max-width: 510px;
+					margin-top: 0px;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 1024px) {
+	.transformer {
+		.slider {
+			.slide {
+				.container {
+					max-width: 768px;
+					margin-top: 0px;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 1920px) {
+	.transformer {
+		.slider {
+			.slide {
+				.background {
+				}
+				.container {
+					max-width: 768px;
+				}
+			}
+		}
+	}
+}
